@@ -13,9 +13,10 @@ class AppStateNotifier extends StateNotifier<AppState> {
   }
 
   void decrement() {
-    AppState newstate = state;
-    newstate = newstate.dencremnt();
-    state = newstate;
+    // AppState newstate = state;
+    // newstate = newstate.dencremnt();
+    // state = newstate;
+    state = state.dencremnt();
     // state.number--;
     print(state.number);
   }
