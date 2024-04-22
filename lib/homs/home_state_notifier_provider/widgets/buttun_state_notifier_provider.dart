@@ -1,12 +1,10 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/logic/appstate.dart';
-import 'package:riverpod_tutorial/logic/notifier.dart';
 
-class ButtonState extends ConsumerWidget {
-  const ButtonState({super.key});
+import 'package:riverpod_tutorial/logic/providers.dart';
+
+class ButtonStateNotifierProvider extends ConsumerWidget {
+  const ButtonStateNotifierProvider({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -19,9 +17,7 @@ class ButtonState extends ConsumerWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  ref.read(numberProvider.notifier).state = ref.read(numberProvider).incremnt();
-                  log(ref.read(numberProvider).toString());
-                  ref.read(counterProvider.notifier).increment();
+                  ref.read(counterStateNotifierProvider.notifier).increment();
                 },
                 child: const Icon(Icons.add),
               ),
@@ -30,7 +26,7 @@ class ButtonState extends ConsumerWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  ref.read(counterProvider.notifier).decrement();
+                  ref.read(counterStateNotifierProvider.notifier).decrement();
                 },
                 child: const Icon(Icons.exposure_minus_1_rounded),
               ),
