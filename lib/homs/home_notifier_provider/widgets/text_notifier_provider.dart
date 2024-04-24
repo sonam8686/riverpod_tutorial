@@ -9,11 +9,25 @@ class TextNotifierProvider extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // Der Bau von AppState Objekt der in Provider Scope benutzt ist und die State kontrollirt
     final appstate = ref.watch(counterNotifierProvider);
-    return Center(
-      child: Text(
-        appstate.number.toString(),
-        style: TextStyle(fontSize: 35),
-      ),
+    // Select Methode in Rverpod ist genau wie Selektor in Provider
+    // damit baut die Seite sich wieder nur wenn die gewählte Value sich ändert
+    // ohne Select Methode baut die Seite sich wieder mit je Änderung der Objekt
+    // egal ob das gezielte Attribut (number in unser Beispiel) sich ändert oder nicht
+    // was die Effizient der App sehr schlimm behindern
+    // deshalb die Select Methode ist absulut Empfohlen, besondes mit größere Apps
+    final number = ref.watch(counterNotifierProvider.select((value) => value.number.toString()));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Text(
+          appstate.number.toString(),
+          style: TextStyle(fontSize: 35),
+        ),
+        Text(
+          number,
+          style: TextStyle(fontSize: 35),
+        ),
+      ],
     );
   }
 }

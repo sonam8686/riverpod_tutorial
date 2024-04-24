@@ -19,6 +19,8 @@ class AppStateNotifier extends StateNotifier<AppState> {
   }
 }
 
+
+
 // diese kann nur int Wert zurück geben und verlangt keine klasse
 // es kann nur mit einzelne Variabeln benutzt werden
 class SingelNotifier extends StateNotifier<int> {

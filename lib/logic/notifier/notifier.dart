@@ -11,7 +11,7 @@ import 'package:riverpod_tutorial/logic/appState/appstate.dart';
 class CounterNotifier extends Notifier<AppState> {
   // Statt Konstraktor benutzt Notifier build methode
   @override
-  // das default Value kann hier definiert werden
+  // Notifier verlangt kein Konstruktor sonder ein build Funktion
   AppState build() => const AppState(number: 10);
   // hie kommt die verlangten Funktionen
   void increment() {

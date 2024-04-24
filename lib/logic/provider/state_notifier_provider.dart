@@ -9,3 +9,4 @@ import 'package:riverpod_tutorial/logic/notifier/state_notifier.dart';
 final counterStateNotifierProvider = StateNotifierProvider<AppStateNotifier, AppState>((ref) => AppStateNotifier());
 // dieses Provider kann nur ein Int Value repräsentieren
 final singelCounterStateNotifierProvider = StateNotifierProvider<SingelNotifier, int>((ref) => SingelNotifier());
+

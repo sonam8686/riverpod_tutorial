@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_tutorial/homs/home_state_notifier_provider/widgets/buttun_state_notifier_provider.dart';
-import 'package:riverpod_tutorial/homs/home_state_notifier_provider/widgets/text_state_notifier_provider.dart';
+import 'package:riverpod_tutorial/homs/home_notifier_provider/widgets/button_notifier_provider.dart';
+import 'package:riverpod_tutorial/homs/home_notifier_provider/widgets/text_notifier_provider.dart';
 
 class HomeNotifierProvider extends StatelessWidget {
   const HomeNotifierProvider({super.key});
@@ -15,10 +15,10 @@ class HomeNotifierProvider extends StatelessWidget {
         children: [
           Expanded(
             flex: 5,
-            child: TextStateNotifierProvider(),
+            child: TextNotifierProvider(),
           ),
           Expanded(
-            child: ButtonStateNotifierProvider(),
+            child: ButtonNotifierProvider(),
           ),
         ],
       ),
