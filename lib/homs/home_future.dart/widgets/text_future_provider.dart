@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/logic/providers.dart';
+import 'package:riverpod_tutorial/logic/provider/future_provider.dart';
 
 class TextFutureProvider extends ConsumerWidget {
   const TextFutureProvider({super.key});

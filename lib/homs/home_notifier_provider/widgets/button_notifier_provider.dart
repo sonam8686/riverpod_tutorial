@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/logic/provider/notifier_provider.dart';
 
-import 'package:riverpod_tutorial/logic/providers.dart';
 
 // die verlangte Providers kann nur in ConsumerWidget erkannt werden
 class ButtonNotifierProvider extends ConsumerWidget {

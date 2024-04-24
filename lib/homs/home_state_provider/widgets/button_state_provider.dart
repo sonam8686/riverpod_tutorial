@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/logic/provider/notifier_provider.dart';
 
-import 'package:riverpod_tutorial/logic/providers.dart';
+import 'package:riverpod_tutorial/logic/provider/state_notifier_provider.dart';
 
 class ButtonState extends ConsumerWidget {
   const ButtonState({super.key});

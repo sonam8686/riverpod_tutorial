@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/logic/providers.dart';
+import 'package:riverpod_tutorial/logic/provider/state_provider.dart';
 
 class TextState extends ConsumerWidget {
   const TextState({super.key});

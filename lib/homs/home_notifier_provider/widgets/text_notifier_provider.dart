@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/logic/providers.dart';
+import 'package:riverpod_tutorial/logic/provider/notifier_provider.dart';
 
 class TextNotifierProvider extends ConsumerWidget {
   const TextNotifierProvider({super.key});
