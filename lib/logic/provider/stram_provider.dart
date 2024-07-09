@@ -14,7 +14,7 @@ final counterStreamProvider = StreamProvider<AppState>(
   (ref) {
 // nach der Situation in counterNotifierProvider kann das Stream-Verhalten sich ändern
 // somit kann man das counterStreamProvider mittels counterNotifierProvider kontrollieren
-    if (ref.watch(counterNotifierProvider).countUp) {
+    if (ref.watch(counterNotifierProvider).countUp!) {
       return Stream.periodic(
         const Duration(milliseconds: 300),
         ((counter) => AppState(number: counter)),

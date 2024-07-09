@@ -6,7 +6,7 @@ import 'package:riverpod_tutorial/logic/appState/appstate.dart';
 // <> ind diese Klammern wird die gezielte Klasse definiert
 class AppStateNotifier extends StateNotifier<AppState> {
   // der Bau Der Notifier Klasse verlangt ein Super um die Eigenschaften der Mutter Klasse anzurufen
-  AppStateNotifier() : super(const AppState());
+  AppStateNotifier() : super(const AppState(number: 0));
 // hie kommt die verlangten Funktionen
   void increment() {
     state = state.copyWith(number: state.number + 1);
@@ -18,8 +18,6 @@ class AppStateNotifier extends StateNotifier<AppState> {
     print(state.number);
   }
 }
-
-
 
 // diese kann nur int Wert zurück geben und verlangt keine klasse
 // es kann nur mit einzelne Variabeln benutzt werden

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeNotifierProvider(),
+      home: HomeStateNotifierProvider(),
       // HomeStateNotifierProvider()
       // HomeNotifierProvider()
       // HomeStateProvider()

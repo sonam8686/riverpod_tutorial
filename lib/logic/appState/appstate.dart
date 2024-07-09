@@ -4,16 +4,13 @@
 // Die Klasse muss aber ein Coppy With Methode haben, weil das Notifier empfängt ein
 // Objekt der Klasse und nicht eine Attribut
 class AppState {
-  final int _number;
-  final bool _countUp;
+  final int number;
+  final bool? countUp;
 
   const AppState({
-    int? number,
-    bool? countUp,
-  })  : _number = number ?? 0,
-        _countUp = countUp ?? true;
-  int get number => _number;
-  bool get countUp => _countUp;
+   required this.number,
+    this.countUp,
+  });
 
   AppState copyWith({
     int? number,
