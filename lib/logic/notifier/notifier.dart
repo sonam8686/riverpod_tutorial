@@ -5,7 +5,6 @@ import 'package:riverpod_tutorial/logic/appState/appstate.dart';
 
 // Um ein Provider bauen zu können muss Ein StateNotifier oder Notifier gebaut werden
 
-
 //Notifier ist eine moderne verbesserte Vesion von StateNotifier und ist meistens damit empfählt
 //weil es flexibler ist und bietet mehr Kontrolle über die Verwaltung von Zuständern
 class CounterNotifier extends Notifier<AppState> {
@@ -15,7 +14,8 @@ class CounterNotifier extends Notifier<AppState> {
   AppState build() => const AppState(number: 10);
   // hie kommt die verlangten Funktionen
   void increment() {
-    state = state.copyWith(number: state.number + 1);
+    final newMumber = state.number * 10;
+    state = state.copyWith(number: newMumber);
     log(state.number.toString());
   }
 
@@ -25,12 +25,12 @@ class CounterNotifier extends Notifier<AppState> {
   }
 
   void countUp() {
-    state = state.copyWith(countUp: true,number: 0);
+    state = state.copyWith(countUp: true, number: 0);
     print(state.countUp);
   }
 
   void countDown() {
-    state = state.copyWith(countUp: false,number: 19);
+    state = state.copyWith(countUp: false, number: 19);
     print(state.countUp);
   }
 }
@@ -48,5 +48,3 @@ class CounterNotifier2 extends Notifier<AppState2> {
     print(state.number);
   }
 }
-
-

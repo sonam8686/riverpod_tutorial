@@ -19,6 +19,9 @@ class ButtonStateNotifierProvider extends ConsumerWidget {
                 onPressed: () {
                   ref.read(counterStateNotifierProvider.notifier).increment();
                 },
+                onLongPress: () {
+                  ref.read(counterStateNotifierProvider.notifier).longincrement();
+                },
                 child: const Icon(Icons.add),
               ),
             ),
