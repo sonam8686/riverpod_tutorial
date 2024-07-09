@@ -6,7 +6,6 @@
 class AppState {
   final int number;
   final bool? countUp;
-  
 
   const AppState({
     required this.number,
@@ -21,7 +20,6 @@ class AppState {
         number: number ?? this.number,
         countUp: countUp ?? this.countUp,
       );
-
 
   @override
   String toString() => number.toString();
